@@ -1,0 +1,54 @@
+{
+  "name": "Reward",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the reward"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of what the reward includes"
+    },
+    "cost": {
+      "type": "number",
+      "description": "Points/tokens required to redeem this reward"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "badge",
+        "perk",
+        "item",
+        "upgrade"
+      ],
+      "default": "badge",
+      "description": "Type of reward"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Icon identifier for the reward"
+    },
+    "rarity": {
+      "type": "string",
+      "enum": [
+        "common",
+        "rare",
+        "epic",
+        "legendary"
+      ],
+      "default": "common",
+      "description": "Rarity level of the reward"
+    },
+    "available": {
+      "type": "boolean",
+      "description": "Whether this reward is currently available",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "cost",
+    "type"
+  ]
+}

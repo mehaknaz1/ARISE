@@ -1,0 +1,28 @@
+{
+  "name": "UserRedemption",
+  "type": "object",
+  "properties": {
+    "reward_id": {
+      "type": "string",
+      "description": "ID of the redeemed reward"
+    },
+    "reward_name": {
+      "type": "string",
+      "description": "Name of the redeemed reward"
+    },
+    "cost": {
+      "type": "number",
+      "description": "Points spent on this redemption"
+    },
+    "redemption_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the reward was redeemed"
+    }
+  },
+  "required": [
+    "reward_id",
+    "reward_name",
+    "cost"
+  ]
+}

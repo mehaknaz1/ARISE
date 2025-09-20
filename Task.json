@@ -1,0 +1,55 @@
+{
+  "name": "Task",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the task"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the task"
+    },
+    "points": {
+      "type": "number",
+      "description": "Points/tokens earned for completing this task",
+      "default": 10
+    },
+    "completed": {
+      "type": "boolean",
+      "description": "Whether the task is completed",
+      "default": false
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "work",
+        "personal",
+        "fitness",
+        "learning",
+        "creative"
+      ],
+      "default": "personal",
+      "description": "Task category"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "default": "medium",
+      "description": "Task difficulty level"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the task was completed"
+    }
+  },
+  "required": [
+    "title",
+    "points"
+  ]
+}
